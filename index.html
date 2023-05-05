@@ -10,6 +10,18 @@
             background-color: #035461;
         }
 
+        #portada {
+            padding-top: 25%;
+            padding-right: 10%;
+        }
+        @media only screen and (max-width: 426px) {
+            #portada {
+                padding-top: 3% !important;
+                font-size:x-small;
+            }
+        
+        }
+
         
      </style>
     
@@ -47,13 +59,18 @@
 
     <section>
             <div class="card text-bg-dark rounded-0 g-0"> 
-                <img src="./img/hawaii.jpg" class="card-img opacity-75 img-fluid" alt="...">
-                    <div class="card-img-overlay text-end">
-                        <h2 class="card-title">Conf Bs As</h2>
-                        <p class="card-text">Bs As llega por primera vex a la Argentina. Un evento para compartir con <br> comunidad el conocimiento y experiencia de los expertos que <br>estan creando el futuro de Internet. Ven a conocer a miembros del <br>evento, a otros estudiantes de Codo a Codo y los oradores de primer <br>nivel que tenemos para ti. Te esperamos!</p>
-                        <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
-                        <button type="button" class="btn btn-success">Comprar tickets</button>
+                <img src="./img/hawaii.jpg" class="card-img opacity-50 img-fluid" alt="...">
+                    
+                <div class="container">
+                    <div class="row">
+                        <div class="card-img-overlay text-end" id="portada">
+                                <h2 class="card-title">Conf Bs As</h2>
+                                <p class="card-text">Bs As llega por primera vex a la Argentina. Un evento para compartir con <br> comunidad el conocimiento y experiencia de los expertos que <br>estan creando el futuro de Internet. Ven a conocer a miembros del <br>evento, a otros estudiantes de Codo a Codo y los oradores de primer <br>nivel que tenemos para ti. Te esperamos!</p>
+                                <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
+                                <button type="button" class="btn btn-success">Comprar tickets</button>
+                        </div>
                     </div>
+                </div>
             </div>
     </section>
        
@@ -131,17 +148,17 @@
                   <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
                 </div>
                 <div class="col-6">
-                  <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                  <input type="text" class="form-control mb-2" placeholder="Apellido" aria-label="Apellido">
                 </div>
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Sobre que quieres hablar?</label>
-                    <span>Recuerda incluir un titulo para tu charla</span>                  
+                    <label for="floatingTextarea2" class="ps-4">Sobre qué quieres hablar?</label>
+                    <span>Recuerda incluir un titulo para tu charla</span>  
                 </div>
-                </div>
+            </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-success" type="button">Button</button>
-                </div>
+                    <button class="btn btn-success btn-lg mt-3" type="button">Enviar</button>
+                </div>                
             </div>
         </form>
     </section>
