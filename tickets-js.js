@@ -1,7 +1,7 @@
-var resumen = document.getElementById("resumen");
+//funcion calcular
+var calcular = document.getElementById("resumen");
 
-// Agregar evento de clic al botón
-resumen.addEventListener("click", calcularPrecioEntrada);
+calcular.addEventListener("click", calcularPrecioEntrada);
 
 function calcularPrecioEntrada() {
     var cantidad = parseInt(document.getElementById("cantidad").value);
@@ -10,21 +10,35 @@ function calcularPrecioEntrada() {
     var precioFinal;
   
     if (descuento === "estudiante") {
-      precioFinal = precioBase * 0.2; // Descuento del 80% (20% del precio base)
+      precioFinal = precioBase * 0.2; 
     } else if (descuento === "trainee") {
-      precioFinal = precioBase * 0.5; // Descuento del 50%
+      precioFinal = precioBase * 0.5; 
     } else if (descuento === "junior") {
-      precioFinal = precioBase * 0.85; // Descuento del 15%
+      precioFinal = precioBase * 0.85; 
     } else {
-      // Si no se selecciona una opción válida, muestra un mensaje de error
       alert("Selecciona una opción de descuento válida.");
       return;
     }
   
     var precioTotal = precioFinal * cantidad;
   
-    // Mostrar el precio total en un elemento de HTML con el id "precioTotal"
-    document.getElementById("precioTotal").textContent = "$" + precioTotal;
+    document.getElementById("precioTotal").textContent = "Total a pagar: $" + precioTotal;
   }
 
+  //funcion limpiar
+  var limpiar = document.getElementById("borrar")
+
+  limpiar.addEventListener("click", limpiarCampos)
+
+  function limpiarCampos() {
+    var nombre = document.getElementById('nombre');
+    var apellido = document.getElementById('apellido');
+    var correo = document.getElementById('correo');
+    var cantidad = document.getElementById('cantidad');
+  
+    nombre.value = '';
+    apellido.value = '';
+    correo.value = '';
+    cantidad.value = '';
+  }
   
